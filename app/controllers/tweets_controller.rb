@@ -15,8 +15,9 @@ class TweetsController < ApplicationController
 			flash[:success]='STFU'
 			redirect_to new_tweet_path
 		else
-			flash[:danger] = "YOUR TWEET IS NOT GOOD ENOUGH"
-			redirect_to new_tweet_path
+			# got rid of flash message because simple_Form includes errors
+			# flash[:danger] = "YOUR TWEET IS NOT GOOD ENOUGH"
+			render 'new' #new.html.erb, not def new
 		end
 	end
 
