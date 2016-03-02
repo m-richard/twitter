@@ -12,7 +12,7 @@ class TweetsController < ApplicationController
 		@tweet = Tweet.new(tweet_params)
 		@tweet.user = current_user
 		@tweet.save
-
+		flash[:success]='STFU'
 		redirect_to new_tweet_path
 	end
 
