@@ -51,6 +51,7 @@ group :development do
 end
 
 group :production do
+	gem 'rails_12factor' #helps with assets like images and perhaps responsiveness
 	gem 'pg'
 end
 
