@@ -18,9 +18,10 @@ index do
 	column :id
 	column :content
 	actions
-	column :User do |tweet|
-		tweet.user.email
+	column :user do |tweet|
+		link_to tweet.user.email, admin_user_path(tweet.user)
 	end
+	
 end
 
 
