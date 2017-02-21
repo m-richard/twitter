@@ -22,7 +22,7 @@ class TweetsController < ApplicationController
 			redirect_to new_tweet_path
 		else
 			flash[:alert] = 'You failed.'
-			render 'new'
+			redirect_to root_path
 		end
 	end
 
